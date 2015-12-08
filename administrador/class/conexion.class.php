@@ -25,9 +25,9 @@
 	public function num_rows($consulta){   
 		return mysqli_num_rows($consulta);
     }  
-public function getTotalConsultas(){  
+	public function getTotalConsultas(){
 		return $this->total_consultas;  
-    }  
+    }
  }
 ?>
 

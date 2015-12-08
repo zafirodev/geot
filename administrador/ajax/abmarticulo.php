@@ -6,8 +6,9 @@ if(isset($_POST['cantidadactualiza'])){
 	$Idart = $_POST['articulo']; 
 	$cantidadact = $_POST['cantidadactualiza'];
 	$query = "select Cantidad from stock where ID = '$Idart'";		  
-	$result2 =  mysql_result($db->consulta($query),0);
-	if ($result2+$cantidadact<0){echo "No hay suficiente stock."; die;}
+	$result2 =  $db->consulta($query);
+	$result2 =	mysqli_fetch_array($result2, MYSQLI_ASSOC);
+	if ($result2['Cantidad']+$cantidadact<0){echo "No hay suficiente stock."; die;}
 	$query = "update stock SET Cantidad = Cantidad + '$cantidadact' where ID = '$Idart'";		  
 	$result =  $db->consulta($query);
 		if ($result){
@@ -19,12 +20,14 @@ if(isset($_POST['cantidadactualiza'])){
 	$Idart = $_POST['articulo']; 
 	$cantidadact = $_POST['cantidadactualizae'];
 	$empleadoID = $_POST['tecnico'];
-	$query = "select Cantidad from stockempleado where ArticuloID = '$Idart' and EmpleadoID=$empleadoID";		  
-	$result2 =  mysql_result($db->consulta($query),0);
-	//if ($result2+$cantidadact<0){echo "El empleado no tiene suficiente stock. No se realizaron cambios."; die;}
-		$query = "select Cantidad from stock where ID = '$Idart'";		  
-	$result2 =  mysql_result($db->consulta($query),0);
-	if ($result2-$cantidadact<0){echo "No hay suficiente stock en base. No se realizaron cambios"; die;}
+	$query = "select Cantidad from stockempleado where ArticuloID = '$Idart' and EmpleadoID=$empleadoID";
+	$result2 =  $db->consulta($query);
+	$result2 =	mysqli_fetch_array($result2, MYSQLI_ASSOC);
+	if ($result2['Cantidad']+$cantidadact<0){echo "El empleado no tiene suficiente stock. No se realizaron cambios."; die;}
+		$query = "select Cantidad from stock where ID = '$Idart'";
+	$result2 =  $db->consulta($query);
+	$result2 =	mysqli_fetch_array($result2, MYSQLI_ASSOC);
+	if ($result2['Cantidad']-$cantidadact<0){echo "No hay suficiente stock en base. No se realizaron cambios"; die;}
 	$query = "update stockempleado SET stockempleado.Cantidad = stockempleado.Cantidad + '$cantidadact' where stockempleado.ArticuloID = '$Idart' AND stockempleado.EmpleadoID = '$empleadoID' ";		  
 	//die($query);
 	$result =  $db->consulta($query);
@@ -40,12 +43,14 @@ if(isset($_POST['cantidadactualiza'])){
 	$cantidadact = $_POST['cantidadtrasp'];
 	$empleadoID = $_POST['traspstemp'];
 	$empleado2ID = $_POST['traspstemp2'];
-	$query = "select Cantidad from stockempleado where ArticuloID = '$Idart' and EmpleadoID=$empleadoID";		  
-	$result2 =  mysql_result($db->consulta($query),0);
-	if ($result2-$cantidadact<0){echo "El empleado no tiene suficiente stock. No se realizaron cambios."; die;}
-	$query = "select ArticuloID from stockempleado where ArticuloID = '$Idart' and EmpleadoID=$empleado2ID";		  
-	$result2 =  @mysql_result($db->consulta($query),0);
-	if ($result2!=$Idart){echo "El empleado no dispone del artículo. Debe agregarlo en altas. No se realizaron cambios."; die;}
+	$query = "select Cantidad from stockempleado where ArticuloID = '$Idart' and EmpleadoID=$empleadoID";
+	$result2 =  $db->consulta($query);
+	$result2 =	mysqli_fetch_array($result2, MYSQLI_ASSOC);
+	if ($result2['Cantidad']-$cantidadact<0){echo "El empleado no tiene suficiente stock. No se realizaron cambios."; die;}
+	$query = "select ArticuloID from stockempleado where ArticuloID = '$Idart' and EmpleadoID=$empleado2ID";
+	$result2 =  $db->consulta($query);
+	$result2 =	mysqli_fetch_array($result2, MYSQLI_ASSOC);
+	if ($result2['Cantidad']!=$Idart){echo "El empleado no dispone del artículo. Debe agregarlo en altas. No se realizaron cambios."; die;}
 	$query = "update stockempleado SET stockempleado.Cantidad = stockempleado.Cantidad - '$cantidadact' where stockempleado.ArticuloID = '$Idart' AND stockempleado.EmpleadoID = '$empleadoID' ";		  
 //die($query);
 	$result =  $db->consulta($query);
@@ -72,8 +77,9 @@ if(isset($_POST['cantidadactualiza'])){
 	
 	echo 'El empleado '.$NomApe.' ya tiene registrado el artículo '.$DescArt.'. Utilice la opción de Actualización de Stock Empleado para modificar la cantidad del mismo.'; die;} else {	
 	$query = "select Cantidad from stock where ID = '$Idart'";		  
-	$result2 =  mysql_result($db->consulta($query),0);
-	if ($result2-$cantidad<0){echo "No hay suficiente stock en base. No se realizó el alta."; die;}
+	$result2 = $db->consulta($query);
+		$result2 =	mysqli_fetch_array($result2, MYSQLI_ASSOC);
+	if ($result2['Cantidad']-$cantidad<0){echo "No hay suficiente stock en base. No se realizó el alta."; die;}
 	$query = "insert into stockempleado (Cantidad,ArticuloID,EmpleadoID,FechaModifica) values ('$cantidad','$Idart','$empleadoID',NOW());";
 	$result =  $db->consulta($query);
 		if ($result){

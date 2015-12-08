@@ -33,7 +33,7 @@ private function verifica_usuario($tiempo, $usuario, $clave) {
         // Si la clave es correcta
         //$idusuario=$this->codificar_usuario($usuario);
 		$db = new MySQL();
-		$query = "SELECT ID FROM usuario where Usuario='$usuario' and Pass=MD5('$clave')";		  
+		$query = "SELECT ID FROM usuario where Usuario='$usuario' and Pass=sha1('$clave')";
 		$result =  $db->consulta($query);
 		if ($db->num_rows($result)>0){
 		setcookie("idusuario", $usuario, time()+$tiempo);		

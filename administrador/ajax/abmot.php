@@ -23,19 +23,22 @@ if ($result5){
 // materiales
 				$query="select stock.*,u.Descripcion tipounidad from stock inner join unidad as u on stock.UnidadID = u.ID left join stockempleado as o on stock.ID = o.ArticuloID where Activo=1 and o.EmpleadoID=".$PersonalID;
 				$result =  $db->consulta($query);
-				$ultimoID=mysql_insert_id();
+				$ultimoID=mysqli_insert_id();
 				while($result2=$db->fetch_array($result)){
 					$Idart = $result2['ID'];
 					$cantidadact=(int) $_POST[$result2['ID']];
 					$query="select Cantidad from stockempleado where ArticuloID='".$result2['ID']."' and EmpleadoID='".$PersonalID."'";
-					$result8=$db->consulta($query);
-					$cantemp=mysql_result($result8,0);
+					//$result8=$db->consulta($query);
+					//$cantemp=mysql_result($result8,0);
+					$cantemp =  $db->consulta($query);
+					$cantemp =	mysqli_fetch_array($cantemp, MYSQLI_ASSOC);
 					$query="select Cantidad from gasto_ot where ArticuloID='".$result2['ID']."' and OtID='".$OtID."'";
 					$result7=$db->consulta($query);
 					if (mysql_num_rows($result7)>0){	
-						$cantant=mysql_result($result7,0);
+						//$cantant=mysql_result($result7,0);
+						$cantant =	mysqli_fetch_array($result7, MYSQLI_ASSOC);
 					
-						if ($cantemp-($cantidadact-$cantant)<0) {echo "$query d $cantidadact 3 $cantant sError en el ajuste de materiales. Reitere los ajustes desde el artículo ".$result2['Descripcion']; die;}
+						if ($cantemp['Cantidad']-($cantidadact-$cantant['Cantidad'])<0) {echo "$query d $cantidadact 3 $cantant sError en el ajuste de materiales. Reitere los ajustes desde el artículo ".$result2['Descripcion']; die;}
 						$query6 = "update gasto_ot set Cantidad='$cantidadact' where OtID=".$OtID." and ArticuloID=".$result2['ID'];		  						$result7=$db->consulta($query6);
 						$query3 = "update stockempleado SET stockempleado.Cantidad = (stockempleado.Cantidad - ($cantidadact-$cantant)) where stockempleado.ArticuloID = '$Idart' AND stockempleado.EmpleadoID = '$PersonalID' ";		  
 						//die($query);
@@ -50,7 +53,7 @@ if ($result5){
 						$result3 =  $db->consulta($query3);}
 					
 				}
-//fin de materiales
+//fin de materiales//
 				
 
 
@@ -68,7 +71,7 @@ if ($result5){
 // materiales
 				$query="select stock.*,u.Descripcion tipounidad from stock inner join unidad as u on stock.UnidadID = u.ID left join stockempleado as o on stock.ID = o.ArticuloID where Activo=1 and o.EmpleadoID=".$PersonalID;
 				$result =  $db->consulta($query);
-				$ultimoID=mysql_insert_id();
+				$ultimoID=mysqli_insert_id();
 				while($result2=$db->fetch_array($result)){
 					$Idart = $result2['ID'];
 					$cantidadact= (int) $_POST[$result2['ID']];
