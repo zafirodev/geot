@@ -19,13 +19,13 @@ $tecnico=$resultOt2['PersonalID'];
 $estado=$resultOt2['EstadoID'];
 }}
 ?>
-<div id="frmaltaot" class="formularios" >
+<div id="frmaltaot" class="formularios" style="margin: 100px auto 0; width: 900px; text-align: center;">
 		<form  id="altaot" class="altas" action="ajax/abmot.php" method="post" style="height:180px;">
 			<h2 align="center"><?php if ($mod==1){echo "Editar OT";} else {echo "Nueva OT";}?></h2>
 	<div id="datosot">		
-			<label>Nro. de Cliente:</label> <input type="text" id="idcliente" name="idcliente" maxlength="8" <?php if ($mod==1){echo "value='$clienteID'";}?>/><br>
-			<label>Nro. de Visita:</label> <input type="text" name="visita" id="visita"/ maxlength="8"  <?php if ($mod==1){echo "value='$visitaID'";}?>><br>
-			<label>Empresa:</label> <select name="empresa">
+			<p>Nro. de Cliente:</p> <input type="text" id="idcliente" name="idcliente" maxlength="8" <?php if ($mod==1){echo "value='$clienteID'";}?>/>
+			<p>Nro. de Visita:</p> <input type="text" name="visita" id="visita"/ maxlength="8"  <?php if ($mod==1){echo "value='$visitaID'";}?>><br><br>
+			<p>Empresa:</p> <select name="empresa" class="modifrubro">
 										<?php
 										$query="select * from empresas ";
 										$result =  $db->consulta($query);
@@ -41,11 +41,11 @@ $estado=$resultOt2['EstadoID'];
 										}
 										}
 										?>
-									</select><br>
-			<label>Fecha de Emisión:</label> <input type="text"  readonly="readonly" id="FechaEmision" name="FechaEmision" class="fechadate" <?php if ($mod==1) {echo "value='$FechaEmision'";} else {echo "value='".date("Y-m-d")."'";}?>/><br>
-			<label>Fecha de Instalación:</label> <input type="text"  readonly="readonly" id="FechaInstalacion" name="FechaInstalacion" class="fechadate"  <?php if ($mod==1) {if ($tecnico!=0){echo "value='$FechaInstalacion'";}}?> /><br>
-			<label>Comentarios:</label> <input type="text" name="comentarios"  <?php if ($mod==1) echo "value='$comentarios'";?>/><br>
-			<label>Técnico:</label> <select <?php if ($mod==1 && $tecnico!=0) echo "disabled";?> id="tecnico" name="tecnico">
+									</select>
+			<p>Fecha de Emisión:</p> <input type="text"  readonly="readonly" id="FechaEmision" name="FechaEmision" class="fechadate" <?php if ($mod==1) {echo "value='$FechaEmision'";} else {echo "value='".date("Y-m-d")."'";}?>/><br><br>
+			<p>Fecha de Instalación:</p> <input type="text"  readonly="readonly" id="FechaInstalacion" name="FechaInstalacion" class="fechadate"  <?php if ($mod==1) {if ($tecnico!=0){echo "value='$FechaInstalacion'";}}?> />
+			<p>Comentarios:</p> <input type="text" name="comentarios"  <?php if ($mod==1) echo "value='$comentarios'";?>/><br><br>
+			<p>Técnico:</p> <select <?php if ($mod==1 && $tecnico!=0) echo "disabled";?> id="tecnico" name="tecnico" class="modifrubro">
 										<option value="0" selected="selected">Sin asignar</option>
 										<?php
 										$db = new MySQL();
@@ -66,8 +66,8 @@ $estado=$resultOt2['EstadoID'];
 											
 										}
 										?>
-									</select><br>
-			<label>Estado de la OT:</label> <select name="estadoot">
+									</select>
+			<p>Estado de la OT:</p> <select name="estadoot" class="modifrubro">
 										<?php
 										$db = new MySQL();
 										$query="select * from estados ";
@@ -81,7 +81,7 @@ $estado=$resultOt2['EstadoID'];
 										while($result2=$db->fetch_array($result)){
 											echo '<option value="'.$result2['ID'].'">'.$result2['Descripcion'].'</option>';
 										}}	?>
-									</select><br>
+									</select><br><br>
 			<p><a href="#" id="mat"><b>-- << <?php if ($mod==1){echo "Lista de";} else {echo "Cargar";}?> Materiales >> --</b></a></p>
 	</div>
 	<div id="materiales" style="display:none;color:#FFF">
@@ -98,7 +98,7 @@ $estado=$resultOt2['EstadoID'];
 				if (mysql_num_rows($resultm)>0){
 				while($resultm2=$db->fetch_array($resultm)){$cantidad=$resultm2['Cantidad']; $cantidado=$cantidad;}}else { $cantidad=""; $cantidado="0";}
 					
-					echo '<label>'.$result2['Descripcion'].':</label><input type="text" value="'.$cantidad.'" onblur="if (this.value>'.$result2['Cantidad'].'+'.$result2['stockemp'].') {alert('.$nodispone.'); this.focus(); die;}" name="'.$result2['ID'].'">'.$result2['tipounidad'].' - Asignados: '.$cantidado.' - '.$result2['stockemp'].' disponibles.<br>';
+					echo '<p>'.$result2['Descripcion'].':</p><input type="text" value="'.$cantidad.'" onblur="if (this.value>'.$result2['Cantidad'].'+'.$result2['stockemp'].') {alert('.$nodispone.'); this.focus(); die;}" name="'.$result2['ID'].'">'.$result2['tipounidad'].' - Asignados: '.$cantidado.' - '.$result2['stockemp'].' disponibles.<br>';
 				}} 
 				else
 				{

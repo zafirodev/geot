@@ -4,8 +4,9 @@ include_once("class/conexion.class.php" );
 $login=new login();
 $login->inicia();
 function afecha($lafecha){	
-return substr($lafecha,8,2)."/".substr($lafecha,5,2)."/".substr($lafecha,0,4);	
+return substr($lafecha,8,2)."/".substr($lafecha,5,2)."/".substr($lafecha,0,4);
 }
+header('Content-type: text/html; charset=utf-8');
 ?>
 <html>
 <head>
@@ -43,18 +44,19 @@ function cargar() {
 <body  ondragstart='return false'>
 <div class="contenedor">
 <div align="center" id="cabecera" >
-	<img src="img/logo.gif" alt="logo" width="300" height="85" align="center">
+	<img src="img/GEOTLOGO.png" alt="logo" width="300" align="left">
+    <div style="float: right; padding-right: 5px;"><?php echo date("F j, Y, g:i a"); ?></div>
 </div>
 <div id="tabsH">
 	<ul>
-	  <li><a href="altastock.php"><span>Stock Altas</span></a></li>
-	  <li><a href="listastock.php"><span>Listar Stock</span></a></li>
-	  <li><a href="consumodemateriales.php"><span>Consumo de Materiales</span></a></li>
-	  <li><a href="cargaoperacion.php"><span>Cargar OT</span></a></li>
-	  <li><a href="listaoperacion.php"><span>Listar OT</span></a></li>
-	  <li><a href="altapersonal.php"><span>Alta Personal</span></a></li>
-	  <li><a href="listapersonal.php"><span>Lista Personal</span></a></li>
-	  <li><a href="otmap.php"><span>OTmap</span></a></li>
+	  <li><a href="altastock.php"><span>Stock Altas | </span></a></li>
+	  <li><a href="listastock.php"><span>Listar Stock | </span></a></li>
+	  <li><a href="consumodemateriales.php"><span>Consumo de Materiales | </span></a></li>
+	  <li><a href="cargaoperacion.php"><span>Cargar OT | </span></a></li>
+	  <li><a href="listaoperacion.php"><span>Listar OT | </span></a></li>
+	  <li><a href="altapersonal.php"><span>Alta Personal | </span></a></li>
+	  <li><a href="listapersonal.php"><span>Lista Personal | </span></a></li>
+<!--	  <li><a href="otmap.php"><span>OTmap | </span></a></li> -->
       <li><a href="../index.php?cerrar=1"><span>Cerrar sesión</span></a></li>
 	</ul>
 </div>

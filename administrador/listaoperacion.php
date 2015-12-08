@@ -6,7 +6,7 @@ $result =  $db->consulta($query);
 $Cant=$db->num_rows($result);// obtenemos la cantidad de registros encontrados.
 ?>
 <p align="center"><a onClick='imprimir();' href='#'><img src="img/print.jpg"></a></p>
-<p>Filtrar por Serie/Mac: <input type="text" id="busqueda" name="busqueda">     Técnico:<select name="listaoptec" id="listaoptec"><option value="-1">Técnico</option><option value="0">Sin asignar</option><?php
+<p align="center">Filtrar por Serie/Mac: <input type="text" id="busqueda" name="busqueda">     Técnico:<select name="listaoptec" id="listaoptec" class="modifrubro"><option value="-1">Técnico</option><option value="0">Sin asignar</option><?php
 										
 										$query="select * from personal where PuestoID = 1 order by NombreApellido";
 										$result3 =  $db->consulta($query);

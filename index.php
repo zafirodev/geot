@@ -1,5 +1,6 @@
 <?php
 session_start();
+header('Content-type: text/html; charset=utf-8');
 ?>
 <html>
 <header>
@@ -8,12 +9,16 @@ session_start();
 </header>
 <body>
 <div align="center" id="cabecera">
-	<img src="administrador/img/logo.gif" alt="logo" width="300" height="85" align="left">
-	<form name="frm_login" method="post" action="administrador/login.php">
-	Usuario: <input type="text" size="10" name="user" /><br />
-	Clave: <input type="password" size="10" name="pass" />
-	<input type="submit" name="submit" value="Login" />
-	</form>
+	<img src="administrador/img/GEOTLOGO.png" alt="logo" width="300" align="left">
+    <div style="float: right; padding-right: 5px;"><?php echo date("F j, Y, g:i a"); ?></div>
+</div>
+<div id="cuerpoinicio">
+    <p>Introduzca usuario y contraseña para ingresar al sistema</p>
+    <form name="frm_login" method="post" action="administrador/login.php">
+        <p>Usuario: </p><input type="text" size="20" name="user" /><br />
+        <p>Clave:   </p><input type="password" size="20" name="pass" /><br />
+        <input type="submit" name="submit" value="Login" class="btn btn-primary"/>
+    </form>
 </div>
 </body>
 </html>

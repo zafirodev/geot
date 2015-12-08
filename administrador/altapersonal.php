@@ -1,13 +1,13 @@
 ﻿<?php
 include("header.php");
 ?>
-<div id="frmaltapersonal" class="formularios" >
+<div id="frmaltapersonal" class="formularios" style="margin: 100px auto 0; width: 900px; text-align: center;">
 		<form  id="altaot" class="altas" action="ajax/abmpersonal.php" method="post" style="height:180px;">
 			<div id="ajax_loader" style=" position:fixed; margin-top: -32px;">
 	<img id="loader_gif" src="img/239.gif" style="display:none; margin-bottom:-420px; "/></div>
             <h2 align="center">Alta Personal</h2>
-			<label>Apellido y Nombre:</label> <input type="text" id="nombreapellido" name="nombreapellido" /><br>
-            <label>Puesto:</label> <select name="puesto">
+			<p>Apellido y Nombre:</p> <input type="text" id="nombreapellido" name="nombreapellido" />
+            <p>Puesto:</p> <select name="puesto" class="modifrubro">
 										<?php
 										$db = new MySQL();
 										$query="select * from puesto";
@@ -16,12 +16,12 @@ include("header.php");
 											echo '<option value="'.$result2[ID].'">'.utf8_encode($result2[Descripcion]).'</option>';
 										}
 										?>
-									</select><br>
-			<label>CUIT/CUIL:</label> <input type="text" id="cuilcuit" name="cuilcuit" />(Solo números sin guiones o barras)<br>
-			<label>Dirección:</label> <input type="text" id="direccion" name="direccion" /><br>
-			<label>Telefono:</label> <input type="text" id="telefono" name="telefono" />(Solo números sin guiones o barras)<br>
-			<label>Cel:</label> <input type="text" id="celular" name="celular" />(Solo números sin guiones o barras)<br>
-            <label>Provincia:</label> <select id="prov" name="prov">
+									</select><br><br>
+			<p>CUIT/CUIL:</p> <input type="text" id="cuilcuit" name="cuilcuit" value="Solo N°, sin guiones o barras."/>
+			<p>Dirección:</p> <input type="text" id="direccion" name="direccion" /><br><br>
+			<p>Telefono:</p> <input type="text" id="telefono" name="telefono" value="Solo N°, sin guiones o barras."/>
+			<p>Cel:</p> <input type="text" id="celular" name="celular" value="Solo N°, sin guiones o barras."/><br><br>
+            <p>Provincia:</p> <select id="prov" name="prov" class="modifrubro">
 										<?php
 										$db = new MySQL();
 										$query="select * from provincias order by nombre";
@@ -31,17 +31,18 @@ include("header.php");
 											echo '<option value="'.$result2[id].'">'.utf8_encode($result2[nombre]).'</option>';
 										}
 										?>
-									</select><br>
-<div id="dept" style="display:none;">	<label>Departamento:</label> <select id="depto" name="depto">
+									</select>
+<div id="dept" style="display:none;"> <p>Departamento:</p> <select id="depto" name="depto">
 										
-									</select><br>        </div>                          
+									</select><br><br>      </div>
 
-<div id="local" style="display:none">	<label>Localidad:</label> <select id="localidad" name="localidad">						
+<div id="local" style="display:none">	<p>Localidad:</p> <select id="localidad" name="localidad">						
 									</select><br> </div>
-			<label>Fecha de Alta:</label> <input type="text" name="falta" value="<?php  echo date("d/m/Y"); ?>" readonly="readonly" /><br>
+			<p>Fecha de Alta:</p> <input type="text" name="falta" value="<?php  echo date("d/m/Y"); ?>" readonly="readonly" /><br>
 			<input type="hidden" name="fbaja" />
-
-			<input type="submit" value="Guardar"  style="float:left"/> <div id="coment" style=" float:left; margin-top:2px; margin-left:10px; color:#FF9"></div>
+            <br><br>
+			<input type="submit" value="Guardar" />
+            <div id="coment" style=" float:left; margin-top:2px; margin-left:10px; color:#FF9"></div>
 		</form>
 </div>
 

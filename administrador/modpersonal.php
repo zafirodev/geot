@@ -6,13 +6,13 @@ $resulto =  $db->consulta($query);
 while($result=$db->fetch_array($resulto)){
 
 ?>
-<div id="frmaltapersonal" class="formularios" >
+<div id="frmaltapersonal" class="formularios" style="margin: 100px auto 0px; width: 900px; text-align: center; height: 600px;">
 		<form  id="altaot" class="altas" action="ajax/abmpersonalmod.php" method="post" style="height:180px;">
 			<div id="ajax_loader" style=" position:fixed; margin-top: -32px;">
 	<img id="loader_gif" src="img/239.gif" style="display:none; margin-bottom:-420px; "/></div>
             <h2 align="center">Editar Personal</h2>
-			<label>Apellido y Nombre:</label> <input type="text" id="nombreapellido" name="nombreapellido" value="<?php echo $result['NombreApellido'];?>"/><br>
-            <label>Puesto:</label> <select name="puesto">
+			<p>Apellido y Nombre:</p> <input type="text" id="nombreapellido" name="nombreapellido" value="<?php echo $result['NombreApellido'];?>"/>
+            <p>Puesto:</p> <select name="puesto" class="modifrubro">
 										<?php
 									
 										$query="select * from puesto";
@@ -22,12 +22,12 @@ while($result=$db->fetch_array($resulto)){
 											echo '<option value="'.$result2['ID'].'" '.$selp.'>'.utf8_encode($result2['Descripcion']).'</option>';
 										}
 										?>
-									</select><br>
-			<label>CUIT/CUIL:</label> <input type="text" id="cuilcuit" name="cuilcuit" value="<?php echo $result['CuilCuit'];?>"/>(Solo números sin guiones o barras)<br>
-			<label>Dirección:</label> <input type="text" id="direccion" name="direccion" value="<?php echo $result['Direccion'];?>" /><br>
-			<label>Telefono:</label> <input type="text" id="telefono" name="telefono" value="<?php echo $result['Telefono'];?>" />(Solo números sin guiones o barras)<br>
-			<label>Cel:</label> <input type="text" id="celular" name="celular" value="<?php echo $result['Cel'];?>"/>(Solo números sin guiones o barras)<br>
-            <label>Provincia:</label> <select id="prov" name="prov">
+									</select><br><br>
+			<p>CUIT/CUIL:</p> <input type="text" id="cuilcuit" name="cuilcuit" value="<?php echo $result['CuilCuit'];?>"/>(Solo números sin guiones o barras)<br><br>
+			<p>Telefono:</p> <input type="text" id="telefono" name="telefono" value="<?php echo $result['Telefono'];?>" />(Solo números sin guiones o barras)<br><br>
+			<p>Celular:</p> <input type="text" id="celular" name="celular" value="<?php echo $result['Cel'];?>"/>(Solo números sin guiones o barras)<br>
+            <p>Dirección:</p> <input type="text" id="direccion" name="direccion" value="<?php echo $result['Direccion'];?>" />
+            <p>Provincia:</p> <select id="prov" name="prov" class="modifrubro">
 										<?php
 										
 										$query="select * from provincias order by nombre";
@@ -39,8 +39,8 @@ while($result=$db->fetch_array($resulto)){
 											echo '<option value="'.$result2['id'].'" '.$provs.' >'.utf8_encode($result2['nombre']).'</option>';
 										}
 										?>
-									</select><br>
-<div id="dept" style="">	<label>Departamento:</label> <select id="depto" name="depto">
+									</select><br><br>
+<div id="dept" style="">	<p>Departamento:</p> <select id="depto" name="depto" class="modifrubro">
 										<?php 	
 										$query='select * from departamentos where provincia_id='.$result['ProvinciaID'].' order by nombre';
 										$resultd =  $db->consulta($query);
@@ -49,9 +49,11 @@ while($result=$db->fetch_array($resulto)){
 											if ($result['DepartamentoID']==$result2['id']){$depts="selected";} else {$depts="";}
 											echo '<option value="'.$result2[id].'" '.$depts.' >'.utf8_encode($result2[nombre]).'</option>';
 										}?>
-									</select><br>        </div>                          
+									</select><br><br> </div>
 
-<div id="local" style="">	<label>Localidad:</label> <select id="localidad" name="localidad">						
+            <div id="local" style="">
+                    <p>Localidad:</p>
+                                <select id="localidad" name="localidad" class="modifrubro">
 										<?php 	
 										$query='select * from localidades where departamento_id='.$result['DepartamentoID'].' order by nombre';
 										$resultl =  $db->consulta($query);
@@ -60,16 +62,14 @@ while($result=$db->fetch_array($resulto)){
 											if ($result['LocalidadID']==$result2['id']){$locals="selected";} else {$locals="";}
 											echo '<option value="'.$result2[id].'" '.$locals.' >'.utf8_encode($result2[nombre]).'</option>';
 										}?>
-									</select><br> </div>
-			<label>Fecha de Alta:</label> <input type="text" name="falta" value="<?php echo afecha($result['FechaAlta']); ?>" readonly="readonly" /><br>
+									</select><br><br> </div>
+			<p>Fecha de Alta:</p> <input type="text" name="falta" value="<?php echo afecha($result['FechaAlta']); ?>" readonly="readonly" /><br><br>
 			<input type="hidden" name="fbaja" />
             <input type="hidden" name="ID" value="<?php echo $_GET['ID'];?>"/>
 
-			<input type="submit" value="Guardar"  style="float:left"/> <div id="coment" style=" float:left; margin-top:2px; margin-left:10px; color:#FF9"></div>
+			<input type="submit" value="Guardar" /> <div id="coment" style=" float:left; margin-top:2px; margin-left:10px; color:#FF9"></div>
 		</form>
 </div>
-
-<br /><br /><br /><br /><br />
 
 <script type="text/javascript">
 // esperamos que el DOM cargue

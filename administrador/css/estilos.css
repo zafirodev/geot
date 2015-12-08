@@ -1,9 +1,13 @@
 ﻿body {
 padding-top: opx;
 margin: 0px 0px 0px 0px;
-font-family: Georgia, "Times New Roman", serif;
-color: #000;
-background-color:	#707070; 
+font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+color: #818a91;
+background-color: #FFFFFF;
+font-size: 1.25rem;
+}
+form{
+    padding-top: 10px;
 }
 .contenedor {
 height: 100%;
@@ -22,9 +26,9 @@ height: 15%;
 
 #footer {
 clear : both;
-color : #cccccc;
+color : #818a91;
 text-align : center;
-margin : 10px 10px 10px 10px;
+margin : 60% 10px 10px;
 padding-bottom:10px;
 background-color: #fff; 
 height: 5%;
@@ -43,13 +47,17 @@ text-align: center;
 	padding: 10px 10px 10px 10px;
 }
 
+#general, #empleado, #calle{
+    padding-top: 20px;
+}
+
 table {
-	width: 650px;
+	width: 900px;
 	border:1px solid #000000;
 	border-spacing: 0px; }
 
 table a, table, tbody, tfoot, tr, th, td {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 table caption {
@@ -58,23 +66,23 @@ table caption {
 	text-indent: 100px;
 	background: url(img/bg_caption.gif) left top;
 	height: 40px;
-	color: #FFFFFF;
+	color: #818a91;
 	border:1px solid #000000; }
 
 thead th {
-	background: url(../img/bg_th.gif) left;
-	height: 21px;
-	color: #FFFFFF;
-	font-size: 0.6em;
-	font-family: Arial;
-	font-weight: bold;
-	padding: 0px 7px;
-	margin: 20px 0px 0px;
-	text-align: left; }
+    background-color: #2a3990;
+    color: #fff;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    height: 21px;
+    margin: 21px 0 0;
+    text-align: center;
+}
 
 tbody tr {	background: #ffffff; }
 
-tbody tr.odd {	background: #f0f0f0; }
+tbody tr.odd {	background: #fff; }
 
 tbody th {
 	background: url(images/arrow_white.gif) left center no-repeat;
@@ -89,46 +97,46 @@ tbody tr.odd th {
 tbody th, tbody td {
 	font-size: 0.8em;
 	line-height: 1.4em;
-	font-family: Arial, Helvetica, sans-serif;
-	color: #000000;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	color: #818a91;
 	padding: 10px 7px;
 	border-bottom: 1px solid #800000;
 	text-align: left; }
 
 tbody a {
-	color: #000000;
+	color: #818a91;
 	font-weight: bold;
 	text-decoration: none; }
 
 tbody a:hover {
-	color: #ffffff;
+	color: #818a91;
 	text-decoration: underline; }
 
 tbody tr:hover th {
-	background: #800000 url(images/arrow_red.gif) left center no-repeat;
+	background: #d9d9d9 url(images/arrow_red.gif) left center no-repeat;
 	background-position: 5px;
-	color: #ffffff; }
+	color: #818a91; }
 
 tbody tr.odd:hover th {
-	background: #000000 url(images/arrow_black.gif) left center no-repeat;
+	background: #d9d9d9 url(images/arrow_black.gif) left center no-repeat;
 	background-position: 5px;
-	color: #ffffff; }
+	color: #818a91; }
 
 tbody tr:hover th a, tr.odd:hover th a	{
-		 color: #ffffff; }
+		 color: #818a91; }
 
 tbody tr:hover td, tr:hover td a, tr.odd:hover td, tr.odd:hover td a {
-	background: #800000;
-	color: #ffffff;	 }
+	background: #d9d9d9;
+	color: #818a91;	 }
 
 tbody tr.odd:hover td, tr.odd:hover td a{
-	background: #000000;
-	color: #ffffff;	 }
+	background: #d9d9d9;
+	color: #818a91;	 }
 
 tfoot th, tfoot td {
 	background: #ffffff url(images/bg_footer.gif) repeat-x bottom;
 	font-size: 0.8em;
-	color: #ffffff;
+	color: #818a91;
 	height: 21px;
 	}
 
@@ -137,13 +145,13 @@ tfoot th, tfoot td {
     #tabsH {
       float:left;
       width:100%;
-      background:#000;
+      background:#2A3990;
       font-size:93%;
       line-height:normal;
       }
     #tabsH ul {
 	  margin:0;
-	  padding:10px 10px 0 50px;
+	  padding: 10px 10px 40px 25px;
 	  list-style:none;
       }
     #tabsH li {
@@ -155,21 +163,22 @@ tfoot th, tfoot td {
       float:left;
       background:url("tableftH.gif") no-repeat left top;
       margin:0;
-      padding:0 0 0 4px;
+      padding:0;
       text-decoration:none;
       }
     #tabsH a span {
       float:left;
       display:block;
-      background:url("tabrightH.gif") no-repeat right top;
+    /* background:url("tabrightH.gif") no-repeat right top; */
       padding:5px 15px 4px 6px;
-      color:#FFF;
+      color:#fff;
       }
     /* Commented Backslash Hack hides rule from IE5-Mac \*/
     #tabsH a span {float:none;}
     /* End IE5-Mac hack */
     #tabsH a:hover span {
-      color:#FFF;
+      color: #818a91;
+
       }
     #tabsH a:hover {
       background-position:0% -42px;
@@ -184,46 +193,144 @@ tfoot th, tfoot td {
     margin-top: 8%;
     padding: 0px;
     width: 250px;
-    font-family: Arial, sans-serif;
-    font-size: 8pt;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 10pt;
     float:left;
 }
 
 #submenu ul li {
-    background-color: #666;
+    background-color: #fff;
 }
 
 #submenu ul li a {
-    color: #ccc;
-    text-decoration: none;
-    text-transform: uppercase;
+    background: #2a3990 none repeat scroll 0 0;
+    border-left: 10px solid #f7931e;
+    border-radius: 0 9px 9px 0;
+    color: #ffffff;
     display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
     padding: 10px 10px 10px 20px;
+    text-decoration: none;
 }
 
 #submenu ul li a:hover {
-    background: #000;
-    border-left: 10px solid #333;
-    color: #fff;
+    background: #F7931E;
+    border-left: 18px solid #2A3990;
+    color: #ffffff;
+    font-weight: bold;
 }
 
 
 label {
-	background-color:#666;
+	background-color:#fff;
 	float:left;
 	display: block;
-	font-family:Arial, Helvetica, sans-serif;
+	font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-weight: normal;
-	color:#fff;
+	color:#818a91;
 }
-input,select {
+input {
+    background: #fff none repeat scroll 0 0;
     border: 1px solid #006;
-    background: #fff;
+    border-radius: 10px;
+    height: 35px;
 }
+
+select {
+    background: #2a3990 none repeat scroll 0 0;
+    border: 1px solid #2a3990;
+    border-radius: 0;
+    color: #fff;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    height: 35px;
+    text-align: center;
+    width: 100%;
+}
+
 input:hover,select:hover {
-    border: 1px solid #f00;
-    background: #000;
-    color:#fff;
+    border: 2px solid #F7931E;
+    background: #fff;
+    color:#818a91;
+}
+#cuerpoinicio{
+    line-height: 0.2;
+    margin: 0 auto;
+    position: relative;
+    width: 50%;
+    text-align: center;
+    padding-top: 10%;
 }
 
+.btn {
+    margin-top: 20px!important;
+    border-width: 0 !important;
+    border-bottom-width: 3px;
+    border-radius: 3px;
+    color: #ffffff;
+    padding: 5px 30px;
+}
+.btn.btn-primary {
+    background: #2a3990;
+    border-color: #010960;
+    font-weight: bold;
+}
+.btn.btn-primary:hover,
+.btn.btn-primary:focus {
+    background: #F7931E;
+    color: #ffffff;
+    font-weight: bold;
+}
+#altarubro p, #modunidad p, #altaunidad p, #altaarticulo p, #actualizaarticulo p, #altaarticuloe p, #altaarticuloe p, #actualizaarticuloe p, #frmtraspaso p, #consummateria p, #altaot p{
+    display: inline;
+}
+#frmaltaot, #frmaltapersonal{
+    width: 900px;
+    height: 400px;
+    border: 2px solid rgb(247, 147, 30);
+    border-radius: 20px;
+    text-align: center;
+}
+.modifrubro{
+    background: #2a3990 none repeat scroll 0 0;
+    border: 1px solid #2a3990;
+    border-radius: 0;
+    color: #fff;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    height: 35px;
+    text-align: center;
+    width: 30%;
+}
+#frmaltarubro, #frmaltaunidad, #frmactualizaarticulo{
+    width: 900px;
+    height: 200px;
+    border: 2px solid rgb(247, 147, 30);
+    border-radius: 20px;
+    text-align: center;
+}
+#altastockempleado, #frmactualizaarticulo, #frmtraspaso{
+    margin-top: 125px;
+}
+#consummateria{
+    margin: 0 auto;
+}
+#frmaltaarticulo, #frmtraspaso, #consummateria{
+    width: 900px;
+    height: 300px;
+    border: 2px solid rgb(247, 147, 30);
+    border-radius: 20px;
+    text-align: center;
+}
 
+.modifrubro:hover {
+    border: 2px solid #F7931E;
+    background: #fff;
+    color:#818a91;
+}
+#modrubro p{
+    display: inline;
+}

@@ -1,18 +1,19 @@
 ﻿<?php
 include("header.php");
 ?>
-<br>
+<br><br><br><br><br>
+<div id="consummateria">
 <h1>Consumo de materiales</h1>
 	<div align="center"><p><a onClick='imprimir();' href='#'><img src="img/print.jpg"></a></p></div>
 <div class="formularios">
 		<img id="loader_gif" src="img/239.gif" style="display:none; position:absolute; margin-top:-80px;"/>
 	<form  class="consumo" action="ajax/consumomateriales.php" method="post" style="height:180px;">
-	<div style="float:left;"><label>Desde: </label> <input readonly="readonly" type="text" id="Fecha" name="Fecha" class="fechadate" /></div><div style="float:left;"> <label>Hasta: </label> <input readonly="readonly" type="text" id="Fecha2" name="Fecha2" class="fechadate" /></div>
+	<div style="float:left;"><label>Desde:  </label> <input readonly="readonly" type="text" id="Fecha" name="Fecha" class="fechadate" /></div><div style="float:left;"> <label>Hasta:  </label> <input readonly="readonly" type="text" id="Fecha2" name="Fecha2" class="fechadate" /></div>
 	<input type="submit" value="ver" />
 	</form><br>
 </div><div id="ajax_loader" style="margin-top:-200px">
 	
-	</div><br /><br />
+	</div>
 <script type="text/javascript">
 $(document).ready(function(){
 	$('.fechadate').datepick({
@@ -46,6 +47,7 @@ $(document).ready(function() {
 	 };
 });
 </script>
+</div>
 <?php
 include("footer.php");
 ?>
