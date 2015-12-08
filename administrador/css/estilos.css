@@ -28,10 +28,12 @@ height: 15%;
 clear : both;
 color : #818a91;
 text-align : center;
-margin : 60% 10px 10px;
+margin : 40% 10px 10px;
 padding-bottom:10px;
 background-color: #fff; 
 height: 5%;
+    line-height: 0.5;
+    font-size: 14px;
 }
 
 h1 {

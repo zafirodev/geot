@@ -1,9 +1,9 @@
 </div>
 <div id="footer">
-
-<p><font color="#000">Sistema de Gestion © 2010 ASM Desarrollo - Telecomunicaciones<br>
-Desarrollado por Pablo Russo - <a href="http://www.asmdesarrollo.com"><font color="#8000000">www.asmdesarrollo.com</font></a> © 2010 </font></p>
-
+<p color="#000">Sistema de Gestion GEOT v1.5 - ZafiroDev Software para Telecomunicaciones</p>
+<p>
+    <a style="color:#2A3990;" href="mailto:contacto@zafirodev.com">contacto@zafirodev.com</a> -
+    <a style="color:#F7931E;" href="http://www.zafirodev.com" color="#800000">www.zafirodev.com</a></p>
 </div>
 </div>
 </body>
