@@ -107,8 +107,8 @@ include("header.php");
 <div id="actualizar" style="display: none; text-align: center; margin: 135px 0px 10px 25%;">
     <div id="frmactualizaarticulo" class="formularios" style="margin: 0; padding: 0;">
         <form  id="actualizaarticulo" class="altas" action="ajax/abmarticulo.php" method="post" style="height:180px;">
-            <h3 align="center">Actualizar Stock GM</h3>
-            <p>Articulo:</p> <select name="articulo" class="modifrubro">
+            <h3 align="center">Actualizar Stock</h3>
+            <p>Articuls Disponibles:</p> <select name="articulo" class="modifrubro">
                 <?php
                 $db = new MySQL();
                 $query="select stock.*,u.Descripcion tipounidad from stock inner join unidad as u on stock.UnidadID = u.ID where Activo=1";
@@ -119,7 +119,7 @@ include("header.php");
                 }
                 ?>
             </select><br><br>
-            <p>Cantidad:</p> <input type="text" name="cantidadactualiza" id="cantidadactualiza" />
+            <p>Agregar:</p> <input type="text" name="cantidadactualiza" id="cantidadactualiza" />
             <input type="button" value="Actualizar" name="actualizagm" onclick=' if((parseInt($("#cantidadactualiza").val())>0)||(parseInt($("#cantidadactualiza").val())<0)){$("#actualizaarticulo").submit();} else {alert("Debe ingresar una cantidad para actualizar el stock.");}'/>
         </form>
     </div>
@@ -139,7 +139,7 @@ include("header.php");
                 }
                 ?>
             </select>
-            <p>Articulo:</p> <select id="actstempart" name="articulo" class="modifrubro">
+            <p>Disponible en Base:</p> <select id="actstempart" name="articulo" class="modifrubro">
                 <?php
                 $db = new MySQL();
                 $query="select stock.*,u.Descripcion tipounidad from stock inner join unidad as u on stock.UnidadID = u.ID left join stockempleado on stock.ID=stockempleado.ArticuloID where Activo=1 and EmpleadoID=(select ID from personal where PuestoID=1 order by NombreApellido limit 1)";
@@ -150,7 +150,7 @@ include("header.php");
                 }
                 ?>
             </select><div id="stempart" style="color:#FFF"></div>
-            <p>Cantidad:</p> <input type="text" id="cantidadactualizae" name="cantidadactualizae" />
+            <p>Agregar la Cantidad de:</p> <input type="text" id="cantidadactualizae" name="cantidadactualizae" />
             <input type="button" value="Actualizar" name="actempleado" onclick='if((parseInt($("#cantidadactualizae").val())>0)||(parseInt($("#cantidadactualizae").val())<0)){$("#actualizaarticuloe").submit();} else {alert("Debe ingresar una cantidad para actualizar el stock."); }'/>
 
         </form>

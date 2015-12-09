@@ -19,7 +19,7 @@ header('Content-type: text/html; charset=utf-8');
 <style type="text/css">
 		@import "inc/datepicker/humanity.datepick.css";
 </style>
-<title>ASM Desarrollo - G.O.T Comunicaciones</title>
+<title>ZafiroDev - GEOT Telecomunicaciones</title>
 <link rel="stylesheet" type="text/css" href="css/estilos.css" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
 <SCRIPT language="javascript">

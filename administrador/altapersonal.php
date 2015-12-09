@@ -1,11 +1,11 @@
 ﻿<?php
 include("header.php");
 ?>
-<div id="frmaltapersonal" class="formularios" style="margin: 100px auto 0; width: 900px; text-align: center;">
+<div id="frmaltapersonal" class="formularios" style="margin: 100px auto 0px; width: 900px; text-align: center; height: 600px;">
 		<form  id="altaot" class="altas" action="ajax/abmpersonal.php" method="post" style="height:180px;">
 			<div id="ajax_loader" style=" position:fixed; margin-top: -32px;">
 	<img id="loader_gif" src="img/239.gif" style="display:none; margin-bottom:-420px; "/></div>
-            <h2 align="center">Alta Personal</h2>
+            <h2 align="center">alta Personal</h2>
 			<p>Apellido y Nombre:</p> <input type="text" id="nombreapellido" name="nombreapellido" />
             <p>Puesto:</p> <select name="puesto" class="modifrubro">
 										<?php
@@ -17,10 +17,10 @@ include("header.php");
 										}
 										?>
 									</select><br><br>
-			<p>CUIT/CUIL:</p> <input type="text" id="cuilcuit" name="cuilcuit" value="Solo N°, sin guiones o barras."/>
+			<p>CUIT/CUIL:</p> <input type="text" id="cuilcuit" name="cuilcuit" alt="Solo N°, sin guiones o barras."/>
 			<p>Dirección:</p> <input type="text" id="direccion" name="direccion" /><br><br>
-			<p>Telefono:</p> <input type="text" id="telefono" name="telefono" value="Solo N°, sin guiones o barras."/>
-			<p>Cel:</p> <input type="text" id="celular" name="celular" value="Solo N°, sin guiones o barras."/><br><br>
+			<p>Telefono:</p> <input type="text" id="telefono" name="telefono" alt="Solo N°, sin guiones o barras."/>
+			<p>Cel:</p> <input type="text" id="celular" name="celular" alt="Solo N°, sin guiones o barras."/><br><br>
             <p>Provincia:</p> <select id="prov" name="prov" class="modifrubro">
 										<?php
 										$db = new MySQL();
@@ -31,14 +31,14 @@ include("header.php");
 											echo '<option value="'.$result2[id].'">'.utf8_encode($result2[nombre]).'</option>';
 										}
 										?>
-									</select>
-<div id="dept" style="display:none;"> <p>Departamento:</p> <select id="depto" name="depto">
+									</select><br><br>
+<div id="dept" style="display:none;"> <p>Departamento:</p> <select id="depto" name="depto" class="modifrubro">
 										
 									</select><br><br>      </div>
 
-<div id="local" style="display:none">	<p>Localidad:</p> <select id="localidad" name="localidad">						
-									</select><br> </div>
-			<p>Fecha de Alta:</p> <input type="text" name="falta" value="<?php  echo date("d/m/Y"); ?>" readonly="readonly" /><br>
+<div id="local" style="display:none">	<p>Localidad:</p> <select id="localidad"  class="modifrubro" name="localidad">
+									</select><br><br> </div>
+			<p>Fecha de alta:</p> <input type="text" name="falta" value="<?php  echo date("d/m/Y"); ?>" readonly="readonly" /><br>
 			<input type="hidden" name="fbaja" />
             <br><br>
 			<input type="submit" value="Guardar" />

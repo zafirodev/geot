@@ -285,6 +285,19 @@ input:hover,select:hover {
     color: #ffffff;
     font-weight: bold;
 }
+
+
+.btn.btn-primarya {
+    background: #F7931E;
+    border-color: #010960;
+    font-weight: bold;
+}
+.btn.btn-primarya:hover,
+.btn.btn-primarya:focus {
+    background: #2a3990;
+    color: #ffffff;
+    font-weight: bold;
+}
 #altarubro p, #modunidad p, #altaunidad p, #altaarticulo p, #actualizaarticulo p, #altaarticuloe p, #altaarticuloe p, #actualizaarticuloe p, #frmtraspaso p, #consummateria p, #altaot p{
     display: inline;
 }

@@ -19,7 +19,7 @@ $tecnico=$resultOt2['PersonalID'];
 $estado=$resultOt2['EstadoID'];
 }}
 ?>
-<div id="frmaltaot" class="formularios" style="margin: 100px auto 0; width: 900px; text-align: center;">
+<div id="frmaltaot" class="formularios" style="margin: 30px auto 0px; width: 900px; text-align: center; border: 0px none;">
 		<form  id="altaot" class="altas" action="ajax/abmot.php" method="post" style="height:180px;">
 			<h2 align="center"><?php if ($mod==1){echo "Editar OT";} else {echo "Nueva OT";}?></h2>
 	<div id="datosot">		
@@ -82,10 +82,10 @@ $estado=$resultOt2['EstadoID'];
 											echo '<option value="'.$result2['ID'].'">'.$result2['Descripcion'].'</option>';
 										}}	?>
 									</select><br><br>
-			<p><a href="#" id="mat"><b>-- << <?php if ($mod==1){echo "Lista de";} else {echo "Cargar";}?> Materiales >> --</b></a></p>
+			<p><a href="#" id="mat" class="btn btn-primarya"><b> <?php if ($mod==1){echo "Lista de";} else {echo "Cargar";}?> Materiales </b></a></p>
 	</div>
-	<div id="materiales" style="display:none;color:#FFF">
-		<p><a href="#" id="ot"><b>-- << Ocultar lista de materiales >> --</b></a></p>
+	<div id="materiales" style="display:none;">
+		<p><a href="#" id="ot" class="btn btn-primarya"><b>Ocultar lista de materiales<br></b></a></p><br>
 				<?php $nodispone="'El empleado no dispone de esa cantidad.'";
 				if ($mod==1){
 				$db = new MySQL();
@@ -98,7 +98,7 @@ $estado=$resultOt2['EstadoID'];
 				if (mysql_num_rows($resultm)>0){
 				while($resultm2=$db->fetch_array($resultm)){$cantidad=$resultm2['Cantidad']; $cantidado=$cantidad;}}else { $cantidad=""; $cantidado="0";}
 					
-					echo '<p>'.$result2['Descripcion'].':</p><input type="text" value="'.$cantidad.'" onblur="if (this.value>'.$result2['Cantidad'].'+'.$result2['stockemp'].') {alert('.$nodispone.'); this.focus(); die;}" name="'.$result2['ID'].'">'.$result2['tipounidad'].' - Asignados: '.$cantidado.' - '.$result2['stockemp'].' disponibles.<br>';
+					echo '<p>'.$result2['Descripcion'].':  </p><input type="text" value="'.$cantidad.'" onblur="if (this.value>'.$result2['Cantidad'].'+'.$result2['stockemp'].') {alert('.$nodispone.'); this.focus(); die;}" name="'.$result2['ID'].'">  '.$result2['tipounidad'].' - Asignados: '.$cantidado.' - '.$result2['stockemp'].' disponibles.<br>';
 				}} 
 				else
 				{
@@ -110,8 +110,8 @@ $estado=$resultOt2['EstadoID'];
 		<br>
 
 		
-	</div> 
-
+	</div>
+			<br>
  <input type="button" value="Guardar" onclick='valiform=0; if ($("#idcliente").val()==""||$("#idcliente").val()=="0") {alert ("Debe ingresar el Nro. de Cliente."); valiform=1;} else{ if ($("#visita").val()==""||$("#visita").val()=="0") {alert ("Debe ingresar el Nro. de Visita.");valiform=1;} else {if ($("#FechaEmision").val()=="") {alert ("Debe ingresar la Fecha de Emisión.");valiform=1;  } else {if (($("#FechaInstalacion").val()=="")&&($("#tecnico").val()!=0)) {alert ("Debe ingresar la Fecha de Instalación cuando la OT tiene un técnico asignado.");valiform=1;}}}} if (valiform==0){$("#tecnico").removeAttr("disabled");$("#altaot").submit();}' />
         
 

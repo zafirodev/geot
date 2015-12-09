@@ -5,7 +5,7 @@ header('Content-type: text/html; charset=utf-8');
 <html>
 <header>
 <link rel="stylesheet" type="text/css" href="administrador/css/estilos.css" />
-<title>ASM Desarrollo - G.O.T. Comunicaciones</title>
+<title>ZafiroDev - GEOT Telecomunicaciones</title>
 </header>
 <body>
 <div align="center" id="cabecera">
