@@ -90,7 +90,7 @@ $Cant=$db->num_rows($result);// obtenemos la cantidad de registros encontrados.
 <script type="text/javascript">
 function borrar(OtID){
 			if (confirm("Si continúa se anulará la OT "+OtID+".")){
-				$("#accion").load("ajax/borraot.php?id="+OtID, function(){$("#listaot").load("ajax/listaot.php?busqueda="+$("#busqueda").val()+"&tecnico="+$("#listaoptec").val());});
+				$("#accion").load("ajax/borraot.php?" + new Date().getTime() + "&id="+OtID, function(){$("#listaot").load("ajax/listaot.php?busqueda="+$("#busqueda").val()+"&tecnico="+$("#listaoptec").val());});
 
 				}
 			else
@@ -107,15 +107,15 @@ $(document).ready(function() {
 		
 $("#busqueda").keypress(function(e) {
 		if(e.keyCode==13) {
-			$("#listaot").load("ajax/listaot.php?busqueda="+$("#busqueda").val()+"&tecnico="+$("#listaoptec").val()+"&OtID="+$("#listaopot").val()+"&IDCliente="+$("#listaopcl").val()+"&FechaInstalacion="+$("#listaopfi").val()+"&estado="+$("#listaopes").val());
+			$("#listaot").load("ajax/listaot.php?" + new Date().getTime() + "&busqueda="+$("#busqueda").val()+"&tecnico="+$("#listaoptec").val()+"&OtID="+$("#listaopot").val()+"&IDCliente="+$("#listaopcl").val()+"&FechaInstalacion="+$("#listaopfi").val()+"&estado="+$("#listaopes").val());
 		}
 							  });
 $("#listaoptec").change(function(){
-								$("#listaot").load("ajax/listaot.php?busqueda="+$("#busqueda").val()+"&tecnico="+$("#listaoptec").val()+"&OtID="+$("#listaopot").val()+"&IDCliente="+$("#listaopcl").val()+"&FechaInstalacion="+$("#listaopfi").val()+"&estado="+$("#listaopes").val());
+								$("#listaot").load("ajax/listaot.php?" + new Date().getTime() + "&busqueda="+$("#busqueda").val()+"&tecnico="+$("#listaoptec").val()+"&OtID="+$("#listaopot").val()+"&IDCliente="+$("#listaopcl").val()+"&FechaInstalacion="+$("#listaopfi").val()+"&estado="+$("#listaopes").val());
 								 
 								 });
 $("select.filtroot").change(function(){	
-								$("#listaot").load("ajax/listaot.php?busqueda="+$("#busqueda").val()+"&tecnico="+$("#listaoptec").val()+"&OtID="+$("#listaopot").val()+"&IDCliente="+$("#listaopcl").val()+"&FechaInstalacion="+$("#listaopfi").val()+"&estado="+$("#listaopes").val());
+								$("#listaot").load("ajax/listaot.php?" + new Date().getTime() + "&busqueda="+$("#busqueda").val()+"&tecnico="+$("#listaoptec").val()+"&OtID="+$("#listaopot").val()+"&IDCliente="+$("#listaopcl").val()+"&FechaInstalacion="+$("#listaopfi").val()+"&estado="+$("#listaopes").val());
 								   });
 					
 });

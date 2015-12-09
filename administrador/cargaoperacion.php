@@ -88,20 +88,30 @@ $estado=$resultOt2['EstadoID'];
 		<p><a href="#" id="ot" class="btn btn-primarya"><b>Ocultar lista de materiales<br></b></a></p><br>
 				<?php $nodispone="'El empleado no dispone de esa cantidad.'";
 				if ($mod==1){
-				$db = new MySQL();
-				$query="select stock.*,u.Descripcion tipounidad,o.Cantidad stockemp from stock inner join unidad as u on stock.UnidadID = u.ID inner join stockempleado as o on stock.ID = o.ArticuloID where Activo=1 and o.EmpleadoID=$tecnico";
-				$result =  $db->consulta($query);
-				
-				while($result2=$db->fetch_array($result)){
-					$query="select Cantidad from gasto_ot where OtID=$OtID and ArticuloID=".$result2['ID'];
-				$resultm =  $db->consulta($query);				
-				if (mysql_num_rows($resultm)>0){
-				while($resultm2=$db->fetch_array($resultm)){$cantidad=$resultm2['Cantidad']; $cantidado=$cantidad;}}else { $cantidad=""; $cantidado="0";}
-					
-					echo '<p>'.$result2['Descripcion'].':  </p><input type="text" value="'.$cantidad.'" onblur="if (this.value>'.$result2['Cantidad'].'+'.$result2['stockemp'].') {alert('.$nodispone.'); this.focus(); die;}" name="'.$result2['ID'].'">  '.$result2['tipounidad'].' - Asignados: '.$cantidado.' - '.$result2['stockemp'].' disponibles.<br>';
-				}} 
+					//$db = new MySQL();
+					$query="select stock.*,u.Descripcion tipounidad,o.Cantidad stockemp from stock inner join unidad as u on stock.UnidadID = u.ID inner join stockempleado as o on stock.ID = o.ArticuloID where Activo=1 and o.EmpleadoID=$tecnico";
+					$result =  $db->consulta($query);
+
+					while($result2=$db->fetch_array($result)){
+						$query="select Cantidad from gasto_ot where OtID=$OtID and ArticuloID=".$result2['ID'];
+						$resultm =  $db->consulta($query);
+						if (mysqli_num_rows($resultm) > 0){
+							while($resultm2=$db->fetch_array($resultm)){
+								$cantidad=$resultm2['Cantidad'];
+								$query="select sum(Cantidad) as cant from gasto_ot where OtID=$OtID and ArticuloID=".$result2['ID'];
+								$cantidado=$db->consulta($query);
+								$cantidado=$db->fetch_array($cantidado);
+								$cantidado=$cantidado[0];
+							}
+						}else {
+							$cantidad=""; $cantidado="0";
+						}
+							echo '<p>'.$result2['Descripcion'].':  </p><input type="text" value="" onblur="if (this.value>'.$result2['Cantidad'].'+'.$result2['stockemp'].') {alert('.$nodispone.'); this.focus(); die;}" name="'.$result2['ID'].'">  '.$result2['tipounidad'].' - Asignados: '.$cantidado.' - '.$result2['stockemp'].' disponibles.<br>';
+					}
+				}
 				else
 				{
+					echo 'Debe dar de alta la OT y luego pasarla a cumplida para asignar materiales.';
 				}
 				?>
 		
@@ -157,7 +167,7 @@ $(document).ready(function() {
 
 		$("#tecnico").change(function(event){ 
     event.preventDefault();
-    $("#materiales").load("ajax/materialot.php?empleado="+$("#tecnico").val(), function(){
+    $("#materiales").load("ajax/materialot.php?" + new Date().getTime() + "&empleado="+$("#tecnico").val(), function(){
 		$("#mat").click(function(event){
 	    event.preventDefault();
 	$("#mat").hide();							 

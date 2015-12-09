@@ -236,14 +236,14 @@ $(document).ready(function() {
 	});
 
 	$("select.filtro").change(function(){
-		$("#empleado").load("ajax/listastockemp.php?EmpleadoID="+$("#empstock").val()+"&Rubro="+$("#rubstock").val()+"&Desc="+$("#descstock").val());
+		$("#empleado").load("ajax/listastockemp.php?" + new Date().getTime() + "&EmpleadoID="+$("#empstock").val()+"&Rubro="+$("#rubstock").val()+"&Desc="+$("#descstock").val());
 								   });
 	
 	$("select.filtroc").change(function(){
-		$("#calle").load("ajax/listastockcalle.php?EmpleadoID="+$("#empstockc").val()+"&Rubro="+$("#rubstockc").val()+"&Desc="+$("#descstockc").val());
+		$("#calle").load("ajax/listastockcalle.php?" + new Date().getTime() + "&EmpleadoID="+$("#empstockc").val()+"&Rubro="+$("#rubstockc").val()+"&Desc="+$("#descstockc").val());
 								   });
 	$("select.filtrog").change(function(){
-		$("#general").load("ajax/listastockgen.php?Rubro="+$("#rubstockg").val()+"&Desc="+$("#descstockg").val());
+		$("#general").load("ajax/listastockgen.php?" + new Date().getTime() + "&Rubro="+$("#rubstockg").val()+"&Desc="+$("#descstockg").val());
 								   });
 		
 });

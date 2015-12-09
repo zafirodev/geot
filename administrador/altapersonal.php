@@ -89,11 +89,11 @@ $(document).ready(function() {
 	$('#prov').change(function(){
 		$('#dept').hide(100);
 		$('#local').hide(100);
-		$('#depto').load('ajax/deptos.php?prov='+$('#prov').val());		
+		$('#depto').load('ajax/deptos.php?" + new Date().getTime() + "&prov='+$('#prov').val());
 		$('#dept').show(400);});
 	$('#depto').change(function(){
 		$('#local').hide(100);
-		$('#localidad').load('ajax/localidades.php?depto='+$('#depto').val());		
+		$('#localidad').load('ajax/localidades.php?" + new Date().getTime() + "&depto='+$('#depto').val());
 		$('#local').show(400);});
 
 

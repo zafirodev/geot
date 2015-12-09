@@ -251,19 +251,19 @@ include("header.php");
         $("input:text").keypress(function(){
             return pulsar(event);});
 
-        $("#stempart").load("ajax/stockempart.php?EmpleadoID="+$("#actstemp").val()+"&ArticuloID="+$("#actstempart").val());
+        $("#stempart").load("ajax/stockempart.php?" + new Date().getTime() + "&EmpleadoID="+$("#actstemp").val()+"&ArticuloID="+$("#actstempart").val());
 
 
         $("#actstemp").change(function(){
-            $("#actstempart").load("ajax/stockemp.php?EmpleadoID="+$("#actstemp").val(), function(){
-                $("#stempart").load("ajax/stockempart.php?EmpleadoID="+$("#actstemp").val()+"&ArticuloID="+$("#actstempart").val());}); });
+            $("#actstempart").load("ajax/stockemp.php?" + new Date().getTime() + "&EmpleadoID="+$("#actstemp").val(), function(){
+                $("#stempart").load("ajax/stockempart.php?" + new Date().getTime() + "&EmpleadoID="+$("#actstemp").val()+"&ArticuloID="+$("#actstempart").val());}); });
 
         $("#traspstemp").change(function(){
-            $("#traspstempart").load("ajax/stockemptr.php?EmpleadoID="+$("#traspstemp").val(), function(){
-                $("#stempart").load("ajax/stockempart.php?EmpleadoID="+$("#actstemp").val()+"&ArticuloID="+$("#actstempart").val());}); });
+            $("#traspstempart").load("ajax/stockemptr.php?" + new Date().getTime() + "&EmpleadoID="+$("#traspstemp").val(), function(){
+                $("#stempart").load("ajax/stockempart.php?" + new Date().getTime() + "&EmpleadoID="+$("#actstemp").val()+"&ArticuloID="+$("#actstempart").val());}); });
 
         $("#actstempart").change(function(){
-            $("#stempart").load("ajax/stockempart.php?EmpleadoID="+$("#actstemp").val()+"&ArticuloID="+$("#actstempart").val());   });
+            $("#stempart").load("ajax/stockempart.php?" + new Date().getTime() + "&EmpleadoID="+$("#actstemp").val()+"&ArticuloID="+$("#actstempart").val());   });
 
 
         $("#verrubros").click(function(event){

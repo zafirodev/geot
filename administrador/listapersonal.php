@@ -42,7 +42,7 @@ $Cant=$db->num_rows($result);// obtenemos la cantidad de registros encontrados.
 // esperamos que el DOM cargue
 function borrar(persID,persNombre){
 			if (confirm("Si continúa se eliminará toda la información concerniente a "+persNombre+".")){
-				$("#accion").load("ajax/borrapers.php?id="+persID, function(){location.reload();});
+				$("#accion").load("ajax/borrapers.php?" + new Date().getTime() + "&id="+persID, function(){location.reload();});
 
 				}
 			else
