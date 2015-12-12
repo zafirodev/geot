@@ -1,4 +1,5 @@
 ﻿<?php
+clearstatcache();
 include("header.php");
 ?>
 
@@ -16,6 +17,7 @@ include("header.php");
     <div id="frmaltarubro" class="formularios">
         <div id="verrubros" align="center">Ver RUBROS disponibles</div><br />
         <div id="listarubros" style="color:#FFF; display:none;"><?php
+            clearstatcache();
             $db = new MySQL();
             $query="select * from rubro where Activo=1";
             $result =  $db->consulta($query);
@@ -26,7 +28,9 @@ include("header.php");
         <div><form id="altarubro" class="altas" action="ajax/abmrubro.php" method="post" style="height:50px;">
                 <p>Nuevo RUBRO:</p> <input type="text"  name="rdescripcion" /> <input type="submit" value="Guardar" /> <div id="ajax_loader"><img id="loader_gif" src="img/239.gif" style=" display:none;"/></div>
             </form>		<form  id="modrubro" class="altas" action="ajax/abmrubromod.php" method="post" style="height:50px;">
-                <p>Modificar RUBRO: </p> <select name="rdescant" class="modifrubro"><?php
+                <p>Modificar RUBRO: </p> <select name="rdescant" class="modifrubro" autocomplete="off">
+                    <?php
+                    clearstatcache();
                     $db = new MySQL();
                     $query="select * from rubro where Activo=1 order by Descripcion";
                     $result =  $db->consulta($query);

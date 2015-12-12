@@ -1,4 +1,10 @@
 ﻿<?php
+header( "Expires: Mon, 20 Dec 1998 01:00:00 GMT" );
+header( "Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT" );
+header( "Cache-Control: no-cache, must-revalidate" );
+header("Cache-Control: post-check=0, pre-check=0", false);
+header( "Pragma: no-cache" );
+header('Content-type: text/html; charset=utf-8');
 include_once("class/login.class.php");
 include_once("class/conexion.class.php" );
 $login=new login();
@@ -6,10 +12,16 @@ $login->inicia();
 function afecha($lafecha){	
 return substr($lafecha,8,2)."/".substr($lafecha,5,2)."/".substr($lafecha,0,4);
 }
-header('Content-type: text/html; charset=utf-8');
 ?>
 <html>
 <head>
+	<meta http-equiv=”Expires” content=”0″>
+
+	<meta http-equiv=”Last-Modified” content=”0″>
+
+	<meta http-equiv=”Cache-Control” content=”no-cache, mustrevalidate”>
+
+	<meta http-equiv=”Pragma” content=”no-cache”>
 <script type="text/javascript" src="inc/jquery-1.3.2.js"></script>
 <script type="text/javascript" src="inc/jquery.form.js"></script>
 <script type="text/javascript" src="inc/datepicker/jquery.datepick.js"></script>
@@ -41,7 +53,8 @@ function cargar() {
 }
 </SCRIPT>
 </head>
-<body  ondragstart='return false'>
+<body  ondragstart='return false' onLoad="if ('Navigator' == navigator.appName)
+document.forms[0].reset();">
 <div class="contenedor">
 <div align="center" id="cabecera" >
 	<img src="img/GEOTLOGO.png" alt="logo" width="300" align="left">

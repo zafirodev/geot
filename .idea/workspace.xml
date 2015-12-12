@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04f84fc8-ea57-4f2f-8f3e-9893bb30bf7a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/administrador/altapersonal.php" afterPath="$PROJECT_DIR$/administrador/altapersonal.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/administrador/altastock.php" afterPath="$PROJECT_DIR$/administrador/altastock.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/administrador/header.php" afterPath="$PROJECT_DIR$/administrador/header.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="geot.iws" />
@@ -25,44 +26,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="cargaoperacion.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/administrador/cargaoperacion.php">
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/administrador/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="103" column="57" selection-start-line="103" selection-start-column="57" selection-end-line="103" selection-end-column="57" />
+            <state vertical-scroll-proportion="-7.811321">
+              <caret line="23" column="49" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="abmrubro.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/administrador/ajax/abmrubro.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5017422">
+              <caret line="16" column="57" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
               <folding>
-                <marker date="1449632744444" expanded="true" signature="161:187" placeholder="select * fro..ot..." />
-                <marker date="1449632744444" expanded="true" signature="1319:1341" placeholder="select * fro..empresas..." />
-                <marker date="1449632744444" expanded="true" signature="2719:2784" placeholder="select * fro..personal..." />
-                <marker date="1449632744444" expanded="true" signature="3511:3532" placeholder="select * fro..estados..." />
-                <marker date="1449632744444" expanded="true" signature="4475:4683" placeholder="select stock..stock..." />
-                <marker date="1449632744444" expanded="true" signature="4796:4858" placeholder="select Canti..gasto_ot..." />
-                <marker date="1449632744444" expanded="true" signature="5068:5143" placeholder="select sum(C..gasto_ot..." />
+                <marker date="1449953343889" expanded="true" signature="150:184" placeholder="select * fro..rubro..." />
+                <marker date="1449953343889" expanded="true" signature="401:474" placeholder="insert into ..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="altapersonal.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/administrador/altapersonal.php">
+      <file leaf-file-name="altastock.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/administrador/altastock.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36756757">
-              <caret line="95" column="51" selection-start-line="95" selection-start-column="51" selection-end-line="95" selection-end-column="51" />
+            <state vertical-scroll-proportion="-5.2363634">
+              <caret line="286" column="40" selection-start-line="286" selection-start-column="40" selection-end-line="286" selection-end-column="40" />
               <folding>
-                <marker date="1449937274885" expanded="true" signature="700:720" placeholder="select * fro..puesto..." />
-                <marker date="1449937274885" expanded="true" signature="1524:1564" placeholder="select * fro..provincias..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="listapersonal.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/administrador/listapersonal.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="44" column="83" selection-start-line="44" selection-start-column="83" selection-end-line="44" selection-end-column="83" />
-              <folding>
-                <marker date="1449631698652" expanded="true" signature="58:104" placeholder="SELECT * FRO..personal..." />
+                <marker date="1449951937453" expanded="true" signature="856:890" placeholder="select * fro..rubro..." />
+                <marker date="1449951937453" expanded="true" signature="1748:1803" placeholder="select * fro..rubro..." />
+                <marker date="1449951937453" expanded="true" signature="2614:2649" placeholder="select * fro..unidad..." />
+                <marker date="1449951937453" expanded="true" signature="3482:3517" placeholder="select * fro..unidad..." />
+                <marker date="1449951937453" expanded="true" signature="4558:4613" placeholder="select * fro..rubro..." />
+                <marker date="1449951937453" expanded="true" signature="5123:5158" placeholder="select * fro..unidad..." />
+                <marker date="1449951937453" expanded="true" signature="6355:6468" placeholder="select stock..stock..." />
+                <marker date="1449951937453" expanded="true" signature="7677:7742" placeholder="select * fro..personal..." />
+                <marker date="1449951937453" expanded="true" signature="8198:8462" placeholder="select stock..stock..." />
+                <marker date="1449951937453" expanded="true" signature="8389:8429" placeholder="select ID fr..personal..." />
+                <marker date="1449951937453" expanded="true" signature="9682:9795" placeholder="select stock..stock..." />
+                <marker date="1449951937453" expanded="true" signature="10367:10432" placeholder="select * fro..personal..." />
+                <marker date="1449951937453" expanded="true" signature="11456:11521" placeholder="select * fro..personal..." />
+                <marker date="1449951937453" expanded="true" signature="11971:12036" placeholder="select * fro..personal..." />
+                <marker date="1449951937453" expanded="true" signature="12497:12790" placeholder="select stock..stock..." />
+                <marker date="1449951937453" expanded="true" signature="12717:12757" placeholder="select ID fr..personal..." />
               </folding>
             </state>
           </provider>
@@ -80,20 +88,23 @@
         <option value="$PROJECT_DIR$/administrador/modpersonal.php" />
         <option value="$PROJECT_DIR$/administrador/footer.php" />
         <option value="$PROJECT_DIR$/administrador/ajax/abmarticulo.php" />
-        <option value="$PROJECT_DIR$/administrador/class/conexion.class.php" />
         <option value="$PROJECT_DIR$/administrador/ajax/abmot.php" />
         <option value="$PROJECT_DIR$/administrador/class/login.class.php" />
-        <option value="$PROJECT_DIR$/administrador/header.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/administrador/ajax/borraot.php" />
         <option value="$PROJECT_DIR$/administrador/inc/datepicker/humanity.datepick.css" />
         <option value="$PROJECT_DIR$/administrador/css/estilos.css" />
-        <option value="$PROJECT_DIR$/administrador/altastock.php" />
         <option value="$PROJECT_DIR$/administrador/listaoperacion.php" />
         <option value="$PROJECT_DIR$/administrador/listapersonal.php" />
         <option value="$PROJECT_DIR$/administrador/listastock.php" />
         <option value="$PROJECT_DIR$/administrador/cargaoperacion.php" />
         <option value="$PROJECT_DIR$/administrador/altapersonal.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/administrador/class/conexion.class.php" />
+        <option value="$PROJECT_DIR$/administrador/ajax/abmrubromod.php" />
+        <option value="$PROJECT_DIR$/.htaccess" />
+        <option value="$PROJECT_DIR$/administrador/altastock.php" />
+        <option value="$PROJECT_DIR$/administrador/header.php" />
+        <option value="$PROJECT_DIR$/administrador/ajax/abmrubro.php" />
       </list>
     </option>
   </component>
@@ -183,24 +194,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="geot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="geot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="administrador" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="ajax" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -265,7 +258,8 @@
     <frame x="-5" y="31" width="1376" height="742" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32484075" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32484075" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -280,7 +274,6 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -307,43 +300,27 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/administrador/cargaoperacion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="103" column="57" selection-start-line="103" selection-start-column="57" selection-end-line="103" selection-end-column="57" />
-          <folding>
-            <marker date="1449632744444" expanded="true" signature="161:187" placeholder="select * fro..ot..." />
-            <marker date="1449632744444" expanded="true" signature="1319:1341" placeholder="select * fro..empresas..." />
-            <marker date="1449632744444" expanded="true" signature="2719:2784" placeholder="select * fro..personal..." />
-            <marker date="1449632744444" expanded="true" signature="3511:3532" placeholder="select * fro..estados..." />
-            <marker date="1449632744444" expanded="true" signature="4475:4683" placeholder="select stock..stock..." />
-            <marker date="1449632744444" expanded="true" signature="4796:4858" placeholder="select Canti..gasto_ot..." />
-            <marker date="1449632744444" expanded="true" signature="5068:5143" placeholder="select sum(C..gasto_ot..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/administrador/altastock.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="136" column="56" selection-start-line="136" selection-start-column="31" selection-end-line="136" selection-end-column="56" />
           <folding>
-            <marker date="1449631698652" expanded="true" signature="-1:-1" placeholder="select * fro..rubro..." />
-            <marker date="1449631698652" expanded="true" signature="-1:-1" placeholder="select * fro..rubro..." />
-            <marker date="1449631698652" expanded="true" signature="-1:-1" placeholder="select * fro..unidad..." />
-            <marker date="1449631698652" expanded="true" signature="-1:-1" placeholder="select * fro..unidad..." />
-            <marker date="1449631698652" expanded="true" signature="-1:-1" placeholder="select * fro..rubro..." />
-            <marker date="1449631698652" expanded="true" signature="-1:-1" placeholder="select * fro..unidad..." />
-            <marker date="1449631698652" expanded="true" signature="-1:-1" placeholder="select stock..stock..." />
-            <marker date="1449631698652" expanded="true" signature="-1:-1" placeholder="select * fro..personal..." />
-            <marker date="1449631698652" expanded="true" signature="-1:-1" placeholder="select stock..stock..." />
-            <marker date="1449631698652" expanded="true" signature="-1:-1" placeholder="select ID fr..personal..." />
-            <marker date="1449631698652" expanded="true" signature="-1:-1" placeholder="select stock..stock..." />
-            <marker date="1449631698652" expanded="true" signature="-1:-1" placeholder="select * fro..personal..." />
-            <marker date="1449631698652" expanded="true" signature="-1:-1" placeholder="select * fro..personal..." />
-            <marker date="1449631698652" expanded="true" signature="-1:-1" placeholder="select * fro..personal..." />
-            <marker date="1449631698652" expanded="true" signature="-1:-1" placeholder="select stock..stock..." />
-            <marker date="1449631698652" expanded="true" signature="-1:-1" placeholder="select ID fr..personal..." />
+            <marker date="1449951937453" expanded="true" signature="856:890" placeholder="select * fro..rubro..." />
+            <marker date="1449951937453" expanded="true" signature="1748:1803" placeholder="select * fro..rubro..." />
+            <marker date="1449951937453" expanded="true" signature="2614:2649" placeholder="select * fro..unidad..." />
+            <marker date="1449951937453" expanded="true" signature="3482:3517" placeholder="select * fro..unidad..." />
+            <marker date="1449951937453" expanded="true" signature="4558:4613" placeholder="select * fro..rubro..." />
+            <marker date="1449951937453" expanded="true" signature="5123:5158" placeholder="select * fro..unidad..." />
+            <marker date="1449951937453" expanded="true" signature="6355:6468" placeholder="select stock..stock..." />
+            <marker date="1449951937453" expanded="true" signature="7677:7742" placeholder="select * fro..personal..." />
+            <marker date="1449951937453" expanded="true" signature="8198:8462" placeholder="select stock..stock..." />
+            <marker date="1449951937453" expanded="true" signature="8389:8429" placeholder="select ID fr..personal..." />
+            <marker date="1449951937453" expanded="true" signature="9682:9795" placeholder="select stock..stock..." />
+            <marker date="1449951937453" expanded="true" signature="10367:10432" placeholder="select * fro..personal..." />
+            <marker date="1449951937453" expanded="true" signature="11456:11521" placeholder="select * fro..personal..." />
+            <marker date="1449951937453" expanded="true" signature="11971:12036" placeholder="select * fro..personal..." />
+            <marker date="1449951937453" expanded="true" signature="12497:12790" placeholder="select stock..stock..." />
+            <marker date="1449951937453" expanded="true" signature="12717:12757" placeholder="select ID fr..personal..." />
           </folding>
         </state>
       </provider>
@@ -353,8 +330,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="95" column="80" selection-start-line="95" selection-start-column="80" selection-end-line="95" selection-end-column="80" />
           <folding>
-            <marker date="1449937274885" expanded="true" signature="700:720" placeholder="select * fro..puesto..." />
-            <marker date="1449937274885" expanded="true" signature="1524:1564" placeholder="select * fro..provincias..." />
+            <marker date="1449937274885" expanded="true" signature="-1:-1" placeholder="select * fro..puesto..." />
+            <marker date="1449937274885" expanded="true" signature="-1:-1" placeholder="select * fro..provincias..." />
           </folding>
         </state>
       </provider>
@@ -379,7 +356,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1449631698652" expanded="true" signature="58:104" placeholder="SELECT * FRO..personal..." />
+            <marker date="1449631698652" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..personal..." />
           </folding>
         </state>
       </provider>
@@ -434,13 +411,13 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1449632744444" expanded="true" signature="161:187" placeholder="select * fro..ot..." />
-            <marker date="1449632744444" expanded="true" signature="1319:1341" placeholder="select * fro..empresas..." />
-            <marker date="1449632744444" expanded="true" signature="2719:2784" placeholder="select * fro..personal..." />
-            <marker date="1449632744444" expanded="true" signature="3511:3532" placeholder="select * fro..estados..." />
-            <marker date="1449632744444" expanded="true" signature="4475:4683" placeholder="select stock..stock..." />
-            <marker date="1449632744444" expanded="true" signature="4796:4858" placeholder="select Canti..gasto_ot..." />
-            <marker date="1449632744444" expanded="true" signature="5068:5143" placeholder="select sum(C..gasto_ot..." />
+            <marker date="1449632744444" expanded="true" signature="-1:-1" placeholder="select * fro..ot..." />
+            <marker date="1449632744444" expanded="true" signature="-1:-1" placeholder="select * fro..empresas..." />
+            <marker date="1449632744444" expanded="true" signature="-1:-1" placeholder="select * fro..personal..." />
+            <marker date="1449632744444" expanded="true" signature="-1:-1" placeholder="select * fro..estados..." />
+            <marker date="1449632744444" expanded="true" signature="-1:-1" placeholder="select stock..stock..." />
+            <marker date="1449632744444" expanded="true" signature="-1:-1" placeholder="select Canti..gasto_ot..." />
+            <marker date="1449632744444" expanded="true" signature="-1:-1" placeholder="select sum(C..gasto_ot..." />
           </folding>
         </state>
       </provider>
@@ -487,30 +464,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/administrador/class/conexion.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.264151">
-          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/administrador/ajax/abmpersonalmod.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.5052265">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrador/ajax/abmrubro.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrador/ajax/abmrubromod.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
@@ -627,13 +583,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.6666665">
-          <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/administrador/ajax/abmpersonal.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.5163044">
@@ -652,13 +601,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.24456522">
           <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrador/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="42" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -734,33 +676,35 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="44" column="83" selection-start-line="44" selection-start-column="83" selection-end-line="44" selection-end-column="83" />
           <folding>
-            <marker date="1449631698652" expanded="true" signature="58:104" placeholder="SELECT * FRO..personal..." />
+            <marker date="1449631698652" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..personal..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/administrador/altastock.php">
+    <entry file="file://$PROJECT_DIR$/administrador/altapersonal.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="160" column="61" selection-start-line="160" selection-start-column="56" selection-end-line="160" selection-end-column="61" />
+        <state vertical-scroll-proportion="-5.4716983">
+          <caret line="50" column="31" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
           <folding>
-            <marker date="1449631698652" expanded="true" signature="-1:-1" placeholder="select * fro..rubro..." />
-            <marker date="1449631698652" expanded="true" signature="-1:-1" placeholder="select * fro..rubro..." />
-            <marker date="1449631698652" expanded="true" signature="-1:-1" placeholder="select * fro..unidad..." />
-            <marker date="1449631698652" expanded="true" signature="-1:-1" placeholder="select * fro..unidad..." />
-            <marker date="1449631698652" expanded="true" signature="-1:-1" placeholder="select * fro..rubro..." />
-            <marker date="1449631698652" expanded="true" signature="-1:-1" placeholder="select * fro..unidad..." />
-            <marker date="1449631698652" expanded="true" signature="-1:-1" placeholder="select stock..stock..." />
-            <marker date="1449631698652" expanded="true" signature="-1:-1" placeholder="select * fro..personal..." />
-            <marker date="1449631698652" expanded="true" signature="-1:-1" placeholder="select stock..stock..." />
-            <marker date="1449631698652" expanded="true" signature="-1:-1" placeholder="select ID fr..personal..." />
-            <marker date="1449631698652" expanded="true" signature="-1:-1" placeholder="select stock..stock..." />
-            <marker date="1449631698652" expanded="true" signature="-1:-1" placeholder="select * fro..personal..." />
-            <marker date="1449631698652" expanded="true" signature="-1:-1" placeholder="select * fro..personal..." />
-            <marker date="1449631698652" expanded="true" signature="-1:-1" placeholder="select * fro..personal..." />
-            <marker date="1449631698652" expanded="true" signature="-1:-1" placeholder="select stock..stock..." />
-            <marker date="1449631698652" expanded="true" signature="-1:-1" placeholder="select ID fr..personal..." />
+            <marker date="1449937274885" expanded="true" signature="-1:-1" placeholder="select * fro..puesto..." />
+            <marker date="1449937274885" expanded="true" signature="-1:-1" placeholder="select * fro..provincias..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0">
+          <caret line="3" column="62" selection-start-line="3" selection-start-column="62" selection-end-line="3" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrador/class/conexion.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.037037">
+          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -769,24 +713,76 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="103" column="57" selection-start-line="103" selection-start-column="57" selection-end-line="103" selection-end-column="57" />
           <folding>
-            <marker date="1449632744444" expanded="true" signature="161:187" placeholder="select * fro..ot..." />
-            <marker date="1449632744444" expanded="true" signature="1319:1341" placeholder="select * fro..empresas..." />
-            <marker date="1449632744444" expanded="true" signature="2719:2784" placeholder="select * fro..personal..." />
-            <marker date="1449632744444" expanded="true" signature="3511:3532" placeholder="select * fro..estados..." />
-            <marker date="1449632744444" expanded="true" signature="4475:4683" placeholder="select stock..stock..." />
-            <marker date="1449632744444" expanded="true" signature="4796:4858" placeholder="select Canti..gasto_ot..." />
-            <marker date="1449632744444" expanded="true" signature="5068:5143" placeholder="select sum(C..gasto_ot..." />
+            <marker date="1449632744444" expanded="true" signature="-1:-1" placeholder="select * fro..ot..." />
+            <marker date="1449632744444" expanded="true" signature="-1:-1" placeholder="select * fro..empresas..." />
+            <marker date="1449632744444" expanded="true" signature="-1:-1" placeholder="select * fro..personal..." />
+            <marker date="1449632744444" expanded="true" signature="-1:-1" placeholder="select * fro..estados..." />
+            <marker date="1449632744444" expanded="true" signature="-1:-1" placeholder="select stock..stock..." />
+            <marker date="1449632744444" expanded="true" signature="-1:-1" placeholder="select Canti..gasto_ot..." />
+            <marker date="1449632744444" expanded="true" signature="-1:-1" placeholder="select sum(C..gasto_ot..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/administrador/altapersonal.php">
+    <entry file="file://$PROJECT_DIR$/administrador/ajax/abmrubromod.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36756757">
-          <caret line="95" column="51" selection-start-line="95" selection-start-column="51" selection-end-line="95" selection-end-column="51" />
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
           <folding>
-            <marker date="1449937274885" expanded="true" signature="700:720" placeholder="select * fro..puesto..." />
-            <marker date="1449937274885" expanded="true" signature="1524:1564" placeholder="select * fro..provincias..." />
+            <marker date="1449945479713" expanded="true" signature="-1:-1" placeholder="select * fro..rubro..." />
+            <marker date="1449945479713" expanded="true" signature="-1:-1" placeholder="update rubro..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23960066">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrador/altastock.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.2363634">
+          <caret line="286" column="40" selection-start-line="286" selection-start-column="40" selection-end-line="286" selection-end-column="40" />
+          <folding>
+            <marker date="1449951937453" expanded="true" signature="856:890" placeholder="select * fro..rubro..." />
+            <marker date="1449951937453" expanded="true" signature="1748:1803" placeholder="select * fro..rubro..." />
+            <marker date="1449951937453" expanded="true" signature="2614:2649" placeholder="select * fro..unidad..." />
+            <marker date="1449951937453" expanded="true" signature="3482:3517" placeholder="select * fro..unidad..." />
+            <marker date="1449951937453" expanded="true" signature="4558:4613" placeholder="select * fro..rubro..." />
+            <marker date="1449951937453" expanded="true" signature="5123:5158" placeholder="select * fro..unidad..." />
+            <marker date="1449951937453" expanded="true" signature="6355:6468" placeholder="select stock..stock..." />
+            <marker date="1449951937453" expanded="true" signature="7677:7742" placeholder="select * fro..personal..." />
+            <marker date="1449951937453" expanded="true" signature="8198:8462" placeholder="select stock..stock..." />
+            <marker date="1449951937453" expanded="true" signature="8389:8429" placeholder="select ID fr..personal..." />
+            <marker date="1449951937453" expanded="true" signature="9682:9795" placeholder="select stock..stock..." />
+            <marker date="1449951937453" expanded="true" signature="10367:10432" placeholder="select * fro..personal..." />
+            <marker date="1449951937453" expanded="true" signature="11456:11521" placeholder="select * fro..personal..." />
+            <marker date="1449951937453" expanded="true" signature="11971:12036" placeholder="select * fro..personal..." />
+            <marker date="1449951937453" expanded="true" signature="12497:12790" placeholder="select stock..stock..." />
+            <marker date="1449951937453" expanded="true" signature="12717:12757" placeholder="select ID fr..personal..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrador/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.811321">
+          <caret line="23" column="49" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrador/ajax/abmrubro.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5017422">
+          <caret line="16" column="57" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+          <folding>
+            <marker date="1449953343889" expanded="true" signature="150:184" placeholder="select * fro..rubro..." />
+            <marker date="1449953343889" expanded="true" signature="401:474" placeholder="insert into ..." />
           </folding>
         </state>
       </provider>
