@@ -1,13 +1,19 @@
 <?php
 session_start();
 header('Content-type: text/html; charset=utf-8');
+header( "Expires: Mon, 20 Dec 1998 01:00:00 GMT" );
+header( "Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT" );
+header( "Cache-Control: no-cache, must-revalidate" );
+header( "Pragma: no-cache" );
 ?>
 <html>
 <header>
 <link rel="stylesheet" type="text/css" href="administrador/css/estilos.css" />
 <title>ZafiroDev - GEOT Telecomunicaciones</title>
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Expires" CONTENT="-1">
 </header>
-<body>
+<body onLoad="if ('Navigator' == navigator.appName)document.forms[0].reset();">
 <div align="center" id="cabecera">
 	<img src="administrador/img/GEOTLOGO.png" alt="logo" width="300" align="left">
     <div style="float: right; padding-right: 5px;"><?php echo date("F j, Y, g:i a"); ?></div>

@@ -1,6 +1,12 @@
 ﻿<?php
 clearstatcache();
 include("header.php");
+header( "Expires: Mon, 20 Dec 1998 01:00:00 GMT" );
+header( "Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT" );
+header( "Cache-Control: no-cache, must-revalidate" );
+header("Cache-Control: post-check=0, pre-check=0", false);
+header( "Pragma: no-cache" );
+header('Content-type: text/html; charset=utf-8');
 ?>
 
 <div id="submenu">
@@ -25,7 +31,8 @@ include("header.php");
             while($result2=$db->fetch_array($result)){
                 echo '* '.$result2[1].'<br>';
             }?><br /></div>
-        <div><form id="altarubro" class="altas" action="ajax/abmrubro.php" method="post" style="height:50px;">
+        <div onLoad="if ('Navigator' == navigator.appName)document.forms[0].reset();">
+            <form id="altarubro" class="altas" action="ajax/abmrubro.php" method="post" style="height:50px;">
                 <p>Nuevo RUBRO:</p> <input type="text"  name="rdescripcion" /> <input type="submit" value="Guardar" /> <div id="ajax_loader"><img id="loader_gif" src="img/239.gif" style=" display:none;"/></div>
             </form>		<form  id="modrubro" class="altas" action="ajax/abmrubromod.php" method="post" style="height:50px;">
                 <p>Modificar RUBRO: </p> <select name="rdescant" class="modifrubro" autocomplete="off">
