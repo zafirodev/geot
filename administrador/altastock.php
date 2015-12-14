@@ -361,7 +361,8 @@ header('Content-type: text/html; charset=utf-8');
         function mostrarRespuesta (responseText){
             $("#loader_gif").fadeOut("slow"); // Hago desaparecer el loader de ajax
             alert(responseText);  //responseText es lo que devuelve la página contacto.php. Si en contacto.php hacemos echo "Hola" , la variable responseText = "Hola" . Aca hago un alert con el valor de response text
-            location.reload();
+            //location.reload();
+            window.location.href=window.location.href + '?' + new Date().getTime();
             // $("#ajax_loader").append("<br>Mensaje: "+responseText); // Aca utilizo la función append de JQuery para añadir el responseText  dentro del div "ajax_loader"
 
         };
